@@ -1,4 +1,4 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 
 #include <stdlib.h>
 #include <stdbool.h>
@@ -9,6 +9,7 @@ int main() {
     int k = 0;
     int f = 0;
     int t = 1;
+    int l = 0;
     bool flag = false;
     bool prov = false;
     scanf_s("%d", &n);
@@ -98,6 +99,18 @@ int main() {
             }
         }
     }
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if ((arr[i * n + j]) == 0) {
+                l++;
+            }
+        }
+        if (l == n) {
+            fprintf(file, "%d;\n", (i + 1));
+        }
+        l = 0;
+    }
+        
     fprintf(file, "}");
     fclose(file);
     system("dot C:\\Users\\User\\Desktop\\Алгоритмы\\MyHomework2V2\\Homework2\\Homework2\\Dot_file.txt -Tbmp -o Dot_file.bmp");
