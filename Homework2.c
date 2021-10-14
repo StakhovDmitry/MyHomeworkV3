@@ -1,6 +1,5 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 
-#include <malloc.h>
 #include <stdlib.h>
 #include <stdbool.h>
 #include <stdio.h>
